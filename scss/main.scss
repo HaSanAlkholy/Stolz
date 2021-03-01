@@ -468,10 +468,10 @@
             width: 35px;
             margin-bottom: 10px;
             cursor: pointer;
-            display:flex;
+            display: flex;
             justify-content: center;
             align-items: center;
-            color:white;
+            color: white;
             font-size: 14px;
         }
     }
@@ -747,8 +747,8 @@ nav {
                 }
             }
 
-            .user{
-                .top-dropDown{
+            .user {
+                .top-dropDown {
                     margin-inline-end: 20px;
                 }
             }
@@ -967,7 +967,7 @@ nav {
                             margin-inline-start: 5px;
                         }
 
-                        .top-dropDown{
+                        .top-dropDown {
                             margin-inline-end: -15px;
                         }
                     }
@@ -1092,10 +1092,180 @@ header {
         }
 
         .swiper-slide {
+            color: white;
+            padding: 190px 0 230px 0;
+            padding-inline-start: 135px;
             img {
                 width: 100%;
-                height: auto;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
                 transition: all 0.5s;
+                z-index: -1;
+            }
+
+            h2 {
+                font-size: 56px;
+                margin: 0 0 30px 0;
+                line-height: 1.5;
+                transition: all 1s ease-out;
+                opacity: 0;
+                transform: translateY(-100px);
+            }
+
+            .shop {
+                margin: 0px;
+                color: white;
+                width: fit-content;
+                background-color: var(--mainColor);
+                padding: 10px 25px;
+                transition: all 1s;
+                display: block;
+                overflow: hidden;
+                z-index: 2;
+                position: relative;
+                opacity: 0;
+                transform: translateX(-100px);
+
+                &:hover {
+                    background-color: var(--hoverColor);
+                }
+            }
+
+            a:hover {
+                color: white;
+            }
+
+            @media (max-width: 992px) {
+                padding: 100px 0 150px 0;
+                padding-inline-start: 80px;
+            }
+
+            @media (max-width: 576px) {
+                padding: 25px 0 35px 0;
+                padding-inline-start: 25px;
+
+                h2 {
+                    font-size: 25px;
+                    margin: 0 0 10px 0;
+                    line-height: 1.2;
+                }
+
+                .shop {
+                    font-size: 11px;
+                    padding: 5px 17px;
+                }
+            }
+        }
+        .swiper-slide-active {
+            h2 {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+            .shop {
+                opacity: 1;
+                transform: translateX(0px);
+            }
+        }
+    }
+}
+
+.big-banner {
+    width: 100%;
+    .banner-content {
+        .banner {
+            color: white;
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            
+            .content{
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                height: 100%;
+                width: 100%;
+                padding: 145px 0;
+            }
+
+            .half {
+                width: 50%;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transition: all 0.5s;
+                z-index: -1;
+            }
+
+            h2 {
+                font-size: 42px;
+                margin: 0 0 30px 0;
+                line-height: 1.5;
+            }
+
+            .shop {
+                margin: 0px;
+                color: white;
+                width: fit-content;
+                background-color: var(--mainColor);
+                padding: 10px 25px;
+                transition: all 1s;
+                display: block;
+                overflow: hidden;
+                z-index: 2;
+                position: relative;
+
+                &:hover {
+                    background-color: var(--hoverColor);
+                }
+            }
+
+            a:hover {
+                color: white;
+                img{
+                    transform: scale(1.05);
+                }
+            }
+
+            @media (max-width: 768px) {
+                .content{
+                    padding:80px 0;
+                }
+
+                h2 {
+                    font-size: 25px;
+                    margin: 0 0 10px 0;
+                    line-height: 1.2;
+                }
+
+                .shop {
+                    font-size: 11px;
+                    padding: 5px 17px;
+                }
+            }
+
+            @media (max-width: 576px) {
+                .content{
+                    padding:45px 0;
+                }
+
+                .half{
+                    width: 45%;
+                }
+
+                h2 {
+                    font-size: 17px;
+                   
+                }
+                .shop {
+                    font-size: 9px;
+                }
             }
         }
     }
@@ -1294,7 +1464,7 @@ header {
     }
     @media (max-width: 992px) {
         .news-text {
-            margin-bottom:15px;
+            margin-bottom: 15px;
             h3 {
                 font-size: 22px;
             }
@@ -1602,26 +1772,34 @@ html[dir="ltr"] {
         left: 10px;
     }
 
-    .newsletter form .send-btn{
+    .newsletter form .send-btn {
         right: 3px;
         left: unset;
     }
-    .newsletter form .env{
+    .newsletter form .env {
         left: 16px;
-        right:unset;
+        right: unset;
     }
 
-    #styleChange{
+    #styleChange {
         left: -120px;
         right: unset;
 
-        .list h4{
+        .list h4 {
             font-size: 14px;
         }
     }
-    #styleChange.open{
+
+    #styleChange.open {
         left: 0px;
         right: unset;
+    }
+
+    .big-banner .banner-content .banner .half{
+        width:5%;
+    }
+    .big-banner .banner-content .banner .txt{
+        max-width:60%;
     }
 }
 

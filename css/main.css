@@ -1266,10 +1266,180 @@ header .swiper-container .swiper-button-next {
   left: 45px;
 }
 
+header .swiper-container .swiper-slide {
+  color: white;
+  padding: 190px 0 230px 0;
+  padding-inline-start: 135px;
+}
+
 header .swiper-container .swiper-slide img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   transition: all 0.5s;
+  z-index: -1;
+}
+
+header .swiper-container .swiper-slide h2 {
+  font-size: 56px;
+  margin: 0 0 30px 0;
+  line-height: 1.5;
+  transition: all 1s ease-out;
+  opacity: 0;
+  transform: translateY(-100px);
+}
+
+header .swiper-container .swiper-slide .shop {
+  margin: 0px;
+  color: white;
+  width: fit-content;
+  background-color: var(--mainColor);
+  padding: 10px 25px;
+  transition: all 1s;
+  display: block;
+  overflow: hidden;
+  z-index: 2;
+  position: relative;
+  opacity: 0;
+  transform: translateX(-100px);
+}
+
+header .swiper-container .swiper-slide .shop:hover {
+  background-color: var(--hoverColor);
+}
+
+header .swiper-container .swiper-slide a:hover {
+  color: white;
+}
+
+@media (max-width: 992px) {
+  header .swiper-container .swiper-slide {
+    padding: 100px 0 150px 0;
+    padding-inline-start: 80px;
+  }
+}
+
+@media (max-width: 576px) {
+  header .swiper-container .swiper-slide {
+    padding: 25px 0 35px 0;
+    padding-inline-start: 25px;
+  }
+  header .swiper-container .swiper-slide h2 {
+    font-size: 25px;
+    margin: 0 0 10px 0;
+    line-height: 1.2;
+  }
+  header .swiper-container .swiper-slide .shop {
+    font-size: 11px;
+    padding: 5px 17px;
+  }
+}
+
+header .swiper-container .swiper-slide-active h2 {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+header .swiper-container .swiper-slide-active .shop {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.big-banner {
+  width: 100%;
+}
+
+.big-banner .banner-content .banner {
+  color: white;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.big-banner .banner-content .banner .content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
+  padding: 145px 0;
+}
+
+.big-banner .banner-content .banner .half {
+  width: 50%;
+}
+
+.big-banner .banner-content .banner img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.5s;
+  z-index: -1;
+}
+
+.big-banner .banner-content .banner h2 {
+  font-size: 42px;
+  margin: 0 0 30px 0;
+  line-height: 1.5;
+}
+
+.big-banner .banner-content .banner .shop {
+  margin: 0px;
+  color: white;
+  width: fit-content;
+  background-color: var(--mainColor);
+  padding: 10px 25px;
+  transition: all 1s;
+  display: block;
+  overflow: hidden;
+  z-index: 2;
+  position: relative;
+}
+
+.big-banner .banner-content .banner .shop:hover {
+  background-color: var(--hoverColor);
+}
+
+.big-banner .banner-content .banner a:hover {
+  color: white;
+}
+
+.big-banner .banner-content .banner a:hover img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .big-banner .banner-content .banner .content {
+    padding: 80px 0;
+  }
+  .big-banner .banner-content .banner h2 {
+    font-size: 25px;
+    margin: 0 0 10px 0;
+    line-height: 1.2;
+  }
+  .big-banner .banner-content .banner .shop {
+    font-size: 11px;
+    padding: 5px 17px;
+  }
+}
+
+@media (max-width: 576px) {
+  .big-banner .banner-content .banner .content {
+    padding: 45px 0;
+  }
+  .big-banner .banner-content .banner .half {
+    width: 45%;
+  }
+  .big-banner .banner-content .banner h2 {
+    font-size: 17px;
+  }
+  .big-banner .banner-content .banner .shop {
+    font-size: 9px;
+  }
 }
 
 .products {
@@ -1775,6 +1945,14 @@ html[dir="ltr"] #styleChange .list h4 {
 html[dir="ltr"] #styleChange.open {
   left: 0px;
   right: unset;
+}
+
+html[dir="ltr"] .big-banner .banner-content .banner .half {
+  width: 5%;
+}
+
+html[dir="ltr"] .big-banner .banner-content .banner .txt {
+  max-width: 60%;
 }
 
 @keyframes vibe {

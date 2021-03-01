@@ -130,6 +130,7 @@ $(window).on("load", function () {
     direction: "horizontal",
     loop: true,
     updateOnWindowResize: true,
+    effect: 'fade',
     autoplay: {
       delay: 5000,
     },
