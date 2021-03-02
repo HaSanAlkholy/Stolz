@@ -414,7 +414,7 @@ ul {
 }
 
 .product .product-disc h5 {
-  font-size: 18px;
+  font-size: 14px;
   color: #373a3c;
   margin-bottom: 15px;
 }
@@ -441,6 +441,7 @@ ul {
   color: white;
   width: fit-content;
   background-color: var(--mainColor);
+  border: 1px solid var(--mainColor);
   padding: 10px 25px;
   height: 40px;
   opacity: 0;
@@ -450,7 +451,8 @@ ul {
 }
 
 .product .product-disc .addCart a:hover {
-  background-color: var(--hoverColor);
+  background-color: transparent;
+  color: var(--mainColor);
 }
 
 .product:hover {
@@ -508,7 +510,7 @@ ul {
 
 @media (max-width: 576px) {
   .banner-container {
-    margin-top: 30px;
+    margin-top: 15px;
   }
 }
 
@@ -567,7 +569,7 @@ ul {
   .banner-container.banner3 .banner {
     margin: 0 auto 15px;
     width: 100%;
-    margin: 0 auto 30px;
+    margin: 0 auto 15px;
     box-shadow: none;
   }
 }
@@ -581,7 +583,7 @@ ul {
   .banner-container.banner2 .banner {
     margin: 0 auto 15px;
     width: 100%;
-    margin: 0 auto 30px;
+    margin: 0 auto 15px;
   }
 }
 
@@ -627,7 +629,7 @@ ul {
 }
 
 #styleChange .ico .icon {
-  animation: rotate3 5s linear infinite;
+  animation: rotate3 3s linear infinite;
 }
 
 #styleChange .list {
@@ -798,7 +800,8 @@ nav .top-setting .top-dropDown {
   border-radius: 5px;
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
   min-width: 120px;
-  padding: 18px 20px;
+  padding: 10px 10px;
+  font-weight: 400;
   transition: all 0.3s ease-in-out;
   visibility: hidden;
   opacity: 0;
@@ -947,8 +950,7 @@ nav .nav-bottom .nav-icons .user .top-dropDown {
   margin-inline-end: 20px;
 }
 
-nav .nav-bottom .nav-icons .nava-btn,
-nav .nav-bottom .nav-icons .search-btn {
+nav .nav-bottom .nav-icons .nava-btn {
   display: none;
 }
 
@@ -968,11 +970,9 @@ nav .nav-bottom .nav-icons .search-btn {
   nav .nav-bottom .nav-icons .nav-icon {
     margin-inline-start: 20px;
   }
-  nav .nav-bottom .nav-icons .nava-btn,
-  nav .nav-bottom .nav-icons .search-btn {
+  nav .nav-bottom .nav-icons .nava-btn {
     display: block;
   }
-  nav .nav-bottom .nav-icons .favourite,
   nav .nav-bottom .nav-icons .nav-lang {
     display: none;
   }
@@ -1093,8 +1093,7 @@ nav .nava .nava-content .nava-head .nav-lang {
     transition: all 0.5s;
     flex-direction: column;
     text-align: start;
-    padding: 0 30px;
-    padding-top: 30px;
+    padding: 20px 20px 0;
     justify-content: flex-start;
     align-items: flex-start;
   }
@@ -1159,6 +1158,9 @@ nav .nava .nava-content .nava-head .nav-lang {
     font-size: 25px;
     cursor: pointer;
     color: #bdbdbd;
+  }
+  nav .nava .nava-content .nava-head2 {
+    justify-content: space-around;
   }
 }
 
@@ -1307,7 +1309,7 @@ header .swiper-container .swiper-slide .shop {
 }
 
 header .swiper-container .swiper-slide .shop:hover {
-  background-color: var(--hoverColor);
+  box-shadow: 0 0 20px 3px var(--mainColor);
 }
 
 header .swiper-container .swiper-slide a:hover {
@@ -1401,7 +1403,7 @@ header .swiper-container .swiper-slide-active .shop {
 }
 
 .big-banner .banner-content .banner .shop:hover {
-  background-color: var(--hoverColor);
+  box-shadow: 0 0 20px 3px var(--mainColor);
 }
 
 .big-banner .banner-content .banner a:hover {
@@ -1452,6 +1454,31 @@ header .swiper-container .swiper-slide-active .shop {
 
 .products .banner-container {
   margin-bottom: 50px;
+}
+
+.products .banner-container .txt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.products .banner-container .txt h4 {
+  font-size: 42px;
+  font-weight: 400;
+  color: white;
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  .products .banner-container .txt h4 {
+    font-size: 30px;
+  }
 }
 
 .products .s-head {
@@ -1511,6 +1538,7 @@ header .swiper-container .swiper-slide-active .shop {
   color: white;
   width: fit-content;
   background-color: var(--mainColor);
+  border: 1px solid var(--mainColor);
   padding: 10px 25px;
   transition: all 0.5s;
   display: block;
@@ -1520,12 +1548,17 @@ header .swiper-container .swiper-slide-active .shop {
 }
 
 .products .more a:hover {
-  background-color: var(--hoverColor);
+  background-color: transparent;
+  color: var(--mainColor);
 }
 
 @media (max-width: 992px) {
+  .products {
+    background-image: none;
+  }
   .products .s-head {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    margin-top: 20px;
   }
   .products .product {
     margin-top: 0;
@@ -1539,9 +1572,9 @@ header .swiper-container .swiper-slide-active .shop {
   color: white;
   padding: 60px 0;
   overflow: hidden;
-  background-image: url("../images/bg2.jpg");
+  background-image: url("../images/bg3.png"), linear-gradient(var(--mainColor), var(--mainColor));
   background-repeat: repeat;
-  background-size: cover;
+  background-size: auto;
   background-position: center;
 }
 
@@ -1565,6 +1598,7 @@ header .swiper-container .swiper-slide-active .shop {
 .newsletter h4 {
   font-size: 19px;
   margin: 0;
+  font-weight: 400;
 }
 
 .newsletter form {
@@ -1603,7 +1637,7 @@ header .swiper-container .swiper-slide-active .shop {
   border: none;
   outline: none;
   box-shadow: none;
-  background-color: var(--hoverColor);
+  background-color: var(--mainColor);
   position: absolute;
   top: 50%;
   left: 3px;
@@ -1611,7 +1645,7 @@ header .swiper-container .swiper-slide-active .shop {
 }
 
 .newsletter form .send-btn:hover {
-  background-color: var(--mainColor);
+  box-shadow: 0 0 20px 3px var(--mainColor);
 }
 
 .newsletter form .env {
@@ -1716,13 +1750,14 @@ footer .footer-top ul {
 footer .footer-top ul li {
   margin-bottom: 15px;
   transition: all 0.5s;
-  color: #757575;
 }
 
 footer .footer-top ul li a {
-  font-size: 15px;
   transition: all 0.3s;
   text-transform: capitalize;
+  font-size: 14px;
+  font-weight: 400;
+  color: #383838;
 }
 
 footer .footer-top ul li:hover {
@@ -1810,8 +1845,8 @@ footer .footer-top .footer-logo .social .social-icon:nth-child(5):hover a {
 footer .footer-top .footer-logo .social .social-icon a {
   height: 40px;
   width: 40px;
+  background-color: var(--mainColor);
   border-radius: 100%;
-  background-color: var(--hoverColor);
   font-size: 20px;
   margin: 0 3px;
   transition: all 0.3s;
@@ -1819,10 +1854,6 @@ footer .footer-top .footer-logo .social .social-icon a {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-footer .footer-top .footer-logo .social .social-icon a:hover {
-  background-color: var(--mainColor);
 }
 
 footer .payment {
@@ -1850,13 +1881,14 @@ footer .credit {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  color: #757575;
 }
 
 footer .credit p {
-  font-size: 15px;
   margin: 5px 0;
   text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: #383838;
 }
 
 @media (max-width: 1200px) {

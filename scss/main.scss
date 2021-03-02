@@ -217,7 +217,7 @@
         padding: 0 20px;
 
         h5 {
-            font-size: 18px;
+            font-size: 14px;
             color: rgba(55, 58, 60, 255);
             margin-bottom: 15px;
 
@@ -249,15 +249,17 @@
                 color: white;
                 width: fit-content;
                 background-color: var(--mainColor);
+                border: 1px solid  var(--mainColor);
                 padding: 10px 25px;
                 height: 40px;
                 opacity: 0;
                 transition: all 0.5s;
                 display: block;
                 overflow: hidden;
-
+                
                 &:hover {
-                    background-color: var(--hoverColor);
+                    background-color: transparent;
+                    color: var(--mainColor);
                 }
             }
         }
@@ -327,7 +329,7 @@
     overflow: hidden;
 
     @media (max-width: 576px) {
-        margin-top: 30px;
+        margin-top: 15px;
     }
 
     .banner-content {
@@ -382,7 +384,7 @@
         .banner {
             margin: 0 auto 15px;
             width: 100%;
-            margin: 0 auto 30px;
+            margin: 0 auto 15px;
             box-shadow: none;
         }
     }
@@ -397,7 +399,7 @@
         .banner {
             margin: 0 auto 15px;
             width: 100%;
-            margin: 0 auto 30px;
+            margin: 0 auto 15px;
         }
     }
 }
@@ -442,7 +444,7 @@
         cursor: pointer;
 
         .icon {
-            animation: rotate3 5s linear infinite;
+            animation: rotate3 3s linear infinite;
         }
     }
 
@@ -610,7 +612,8 @@ nav {
             border-radius: 5px;
             box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
             min-width: 120px;
-            padding: 18px 20px;
+            padding: 10px 10px;
+            font-weight: 400;
             transition: all 0.3s ease-in-out;
             visibility: hidden;
             opacity: 0;
@@ -753,8 +756,7 @@ nav {
                 }
             }
 
-            .nava-btn,
-            .search-btn {
+            .nava-btn {
                 display: none;
             }
 
@@ -777,12 +779,10 @@ nav {
                     margin-inline-start: 20px;
                 }
 
-                .nava-btn,
-                .search-btn {
+                .nava-btn {
                     display: block;
                 }
 
-                .favourite,
                 .nav-lang {
                     display: none;
                 }
@@ -900,8 +900,7 @@ nav {
                 transition: all 0.5s;
                 flex-direction: column;
                 text-align: start;
-                padding: 0 30px;
-                padding-top: 30px;
+                padding: 20px 20px 0;
                 justify-content: flex-start;
                 align-items: flex-start;
 
@@ -981,6 +980,9 @@ nav {
                         cursor: pointer;
                         color: #bdbdbd;
                     }
+                }
+                .nava-head2{
+                    justify-content: space-around;
                 }
             }
         }
@@ -1129,7 +1131,7 @@ header {
                 transform: translateX(-100px);
 
                 &:hover {
-                    background-color: var(--hoverColor);
+                    box-shadow: 0 0 20px 3px var(--mainColor);
                 }
             }
 
@@ -1179,8 +1181,8 @@ header {
             position: relative;
             width: 100%;
             overflow: hidden;
-            
-            .content{
+
+            .content {
                 display: flex;
                 align-items: flex-start;
                 justify-content: flex-start;
@@ -1222,20 +1224,20 @@ header {
                 position: relative;
 
                 &:hover {
-                    background-color: var(--hoverColor);
+                    box-shadow: 0 0 20px 3px var(--mainColor);
                 }
             }
 
             a:hover {
                 color: white;
-                img{
+                img {
                     transform: scale(1.05);
                 }
             }
 
             @media (max-width: 768px) {
-                .content{
-                    padding:80px 0;
+                .content {
+                    padding: 80px 0;
                 }
 
                 h2 {
@@ -1251,17 +1253,16 @@ header {
             }
 
             @media (max-width: 576px) {
-                .content{
-                    padding:45px 0;
+                .content {
+                    padding: 45px 0;
                 }
 
-                .half{
+                .half {
                     width: 45%;
                 }
 
                 h2 {
                     font-size: 17px;
-                   
                 }
                 .shop {
                     font-size: 9px;
@@ -1280,6 +1281,31 @@ header {
 
     .banner-container {
         margin-bottom: 50px;
+
+        .txt{
+            position: absolute;
+            top:0;
+            left:0;
+            height:100%;
+            width:100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            h4{
+                font-size: 42px;
+                font-weight: 400;
+                color: white;
+                margin: 0;
+            }
+
+            @media(max-width:992px){
+                h4{
+                    font-size: 30px;
+                }
+            }
+        }
     }
 
     .s-head {
@@ -1328,6 +1354,7 @@ header {
             color: white;
             width: fit-content;
             background-color: var(--mainColor);
+            border: 1px solid  var(--mainColor);
             padding: 10px 25px;
             transition: all 0.5s;
             display: block;
@@ -1336,14 +1363,17 @@ header {
             position: relative;
 
             &:hover {
-                background-color: var(--hoverColor);
+                background-color: transparent;
+                color: var(--mainColor);
             }
         }
     }
 
     @media (max-width: 992px) {
+        background-image: none;
         .s-head {
-            margin-bottom: 40px;
+            margin-bottom: 20px;
+            margin-top: 20px;
         }
 
         .product {
@@ -1360,9 +1390,9 @@ header {
     color: white;
     padding: 60px 0;
     overflow: hidden;
-    background-image: url("../images/bg2.jpg");
+    background-image: url("../images/bg3.png"), linear-gradient(var(--mainColor), var(--mainColor));
     background-repeat: repeat;
-    background-size: cover;
+    background-size: auto;
     background-position: center;
 
     .news-body {
@@ -1385,6 +1415,7 @@ header {
     h4 {
         font-size: 19px;
         margin: 0;
+        font-weight: 400;
     }
 
     form {
@@ -1422,14 +1453,14 @@ header {
             border: none;
             outline: none;
             box-shadow: none;
-            background-color: var(--hoverColor);
+            background-color: var(--mainColor);
             position: absolute;
             top: 50%;
             left: 3px;
             transform: translateY(-50%);
 
             &:hover {
-                background-color: var(--mainColor);
+                box-shadow: 0 0 20px 3px var(--mainColor);
             }
         }
 
@@ -1531,11 +1562,12 @@ footer {
             li {
                 margin-bottom: 15px;
                 transition: all 0.5s;
-                color: #757575;
                 a {
-                    font-size: 15px;
                     transition: all 0.3s;
                     text-transform: capitalize;
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: #383838;
                 }
                 &:hover {
                     transform: translateX(-5px);
@@ -1629,8 +1661,8 @@ footer {
                     a {
                         height: 40px;
                         width: 40px;
+                        background-color: var(--mainColor);
                         border-radius: 100%;
-                        background-color: var(--hoverColor);
                         font-size: 20px;
                         margin: 0 3px;
                         transition: all 0.3s;
@@ -1638,10 +1670,6 @@ footer {
                         display: flex;
                         align-items: center;
                         justify-content: center;
-
-                        &:hover {
-                            background-color: var(--mainColor);
-                        }
                     }
                 }
             }
@@ -1673,12 +1701,13 @@ footer {
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        color: rgba(117, 117, 117, 255);
 
         p {
-            font-size: 15px;
             margin: 5px 0;
             text-align: center;
+            font-size: 14px;
+            font-weight: 400;
+            color: #383838;
         }
     }
 }
@@ -1795,11 +1824,11 @@ html[dir="ltr"] {
         right: unset;
     }
 
-    .big-banner .banner-content .banner .half{
-        width:5%;
+    .big-banner .banner-content .banner .half {
+        width: 5%;
     }
-    .big-banner .banner-content .banner .txt{
-        max-width:60%;
+    .big-banner .banner-content .banner .txt {
+        max-width: 60%;
     }
 }
 

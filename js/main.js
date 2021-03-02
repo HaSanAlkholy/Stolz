@@ -203,10 +203,10 @@ $(window).on("load", function () {
   // get the colors from storage
   if(localStorage.getItem("--mainColor")){
     let c1 = localStorage.getItem("--mainColor");
-    let c2 = localStorage.getItem("--hoverColor");
+    // let c2 = localStorage.getItem("--hoverColor");
 
     document.documentElement.style.setProperty("--mainColor", c1);
-    document.documentElement.style.setProperty("--hoverColor", c2);
+    // document.documentElement.style.setProperty("--hoverColor", c2);
 
     $('#styleChange .color').html('');
      document.querySelectorAll('#styleChange .color').forEach(el =>{
@@ -229,16 +229,16 @@ $(window).on("load", function () {
     if(e.target.classList.contains('color')){
 
       let c1 = e.target.getAttribute('data-mainColor');
-      let c2 = e.target.getAttribute('data-hoverColor');
+      // let c2 = e.target.getAttribute('data-hoverColor');
 
       document.documentElement.style.setProperty("--mainColor", c1);
-      document.documentElement.style.setProperty("--hoverColor", c2);
+      // document.documentElement.style.setProperty("--hoverColor", c2);
 
       $('#styleChange .color').html('');
       $(e.target).html('<i class="fas fa-check"></i>');
 
       localStorage.setItem("--mainColor", c1);
-      localStorage.setItem("--hoverColor", c2);
+      // localStorage.setItem("--hoverColor", c2);
 
     }
   }
