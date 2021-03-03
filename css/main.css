@@ -852,6 +852,10 @@ nav .nav-top .top-content {
   align-items: center;
 }
 
+nav .nav-top .top-body {
+  padding: 0;
+}
+
 nav .nav-top .top-body .down {
   font-size: 9px;
   margin-inline-start: 5px;
